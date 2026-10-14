@@ -1,2 +1,7 @@
-const router = require('express').Router
-const {} = require('../controller/userController')
+const router = require('express').Router();
+const {homepage} = require('../controller/userController');
+
+router.get('/homepage', homepage)
+
+
+module.exports = router

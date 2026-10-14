@@ -4,6 +4,9 @@ const app = http.createServer((request, response)=>{
     if (request.url=='/'){
         response.writeHead(200, {"content-type": "text/plain"});
         response.end("Welcome to my Server")
+    } else {
+        response.writeHead(401,{"content-type": "text/plain"})
+        response.end("Page not found")
     }
 })
 app.listen(2000, ()=>{
